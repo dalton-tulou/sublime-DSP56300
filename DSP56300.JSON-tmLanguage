@@ -1,0 +1,52 @@
+{ "name": "DSP56300 Assembler",
+  "scopeName": "source.asm.dsp56300",
+  "fileTypes": ["asm"],
+  "patterns": [
+    { "match": ";[^\n]*\n",
+      "name": "comment.line.semicolon"
+    },
+    { "match": "^[a-zA-Z_]([a-zA-Z0-9_]*|[a-zA-Z0-9_\\.%\\$]*[a-zA-Z0-9_])(?=[ \t:])",
+      "name": "meta.label.global.dsp56300"
+    },
+    { "match": "(?i)^([a-zA-Z0-9_][a-zA-Z0-9_\\.]*)(?=([ \t]*=|[ \t]+equ[ \t]+))",
+      "name": "meta.equate.dsp56300",
+      "captures": {
+        "1": { "name": "variable.other.symbol.dsp56300" }
+      }
+    },
+    { "match": "(?i)\\b(ABS|ADC|ADD|ADDL|ADDR|ASL|ASR|BRA|BRCLR|BRSET|BSR|BSCLR|BSSET|JMP|JCLR|JSET|JSR|JSCLR|JSSET|CLR|CMP|CMPM|CPMU|DEC|DIV|DMAC|INC|MAC|MACI|MACR|MACRI|MACSU|MACUU|MAX|MAXM|MPY|MPYI|MPYR|MPYRI|MPYSU|MPYUU|NEG|NORM|NORMF|RND|SBC|SUB|SUBL|SUBR|TFR|TST|AND|ANDI|CLB|EOR|EXTRACT|EXTRACTU|INSERT|LSL|LSR|MERGE|NOT|OR|ORI|ROL|ROR|BCHG|BCLR|BSET|BTST|DO|DOR|FOREVER|ENDDO|LEA|LUA|LRA|MOVE|MOVEC|MOVEM|MOVEP|NOP|PLOCK|PUNLOCK|PLOCKR|PULOCKR|PFREE|PFLUSH|PFLUSHUN|REP|RESET|RTI|RTS|STOP|WAIT)\\b",
+        "name": "keyword.other.opcode.cpu.dsp56300"
+    },
+    { "match": "(?i)\\b(BRK(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\\b",
+        "name": "keyword.other.opcode.cpu.debugcc.dsp56300"
+    },
+    { "match": "(?i)\\b(B(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\\b",
+        "name": "keyword.other.opcode.cpu.bcc.dsp56300"
+    },
+    { "match": "(?i)\\b(BS(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\\b",
+        "name": "keyword.other.opcode.cpu.bscc.dsp56300"
+    },
+    { "match": "(?i)\\b(DEBUG(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN)?)\\b",
+        "name": "keyword.other.opcode.cpu.debugcc.dsp56300"
+    },
+    { "match": "(?i)\\b(J(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\\b",
+        "name": "keyword.other.opcode.cpu.jcc.dsp56300"
+    },
+    { "match": "(?i)\\b(JS(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\\b",
+        "name": "keyword.other.opcode.cpu.jscc.dsp56300"
+    },
+    { "match": "(?i)\\b(IF(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\\b",
+        "name": "keyword.other.opcode.cpu.ifcc.dsp56300"
+    },
+    { "match": "(?i)\\b(TRAP(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN)?)\\b",
+        "name": "keyword.other.opcode.cpu.trapcc.dsp56300"
+    },
+    { "match": "(?i)\\b(T(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\\b",
+        "name": "keyword.other.opcode.cpu.tcc.dsp56300"
+    },
+    { "match": "(?i)\\b(([RMN][0-7])|([ABXY][012]?)|S|C|D|P|L|XY|SR|SP|MR|OMR|LA|VBA|SC|LC|SSH|EP|PC|SSL|SZ)\\b",
+      "name": "variable.language.register.dsp56300"
+    }
+  ],
+  "uuid": "ddad8bf1-2f0b-49f6-b69d-c43418626a89"
+}
