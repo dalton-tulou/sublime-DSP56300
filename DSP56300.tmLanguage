@@ -32,6 +32,11 @@
 					<key>name</key>
 					<string>variable.other.symbol.dsp56300</string>
 				</dict>
+				<key>2</key>
+				<dict>
+					<key>name</key>
+					<string>keyword.other.dsp56300</string>
+				</dict>
 			</dict>
 			<key>match</key>
 			<string>(?i)^([a-zA-Z0-9_][a-zA-Z0-9_\.]*)(?=([ 	]*=|[ 	]+equ[ 	]+))</string>
@@ -40,63 +45,105 @@
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)\b(ABS|ADC|ADD|ADDL|ADDR|ASL|ASR|BRA|BRCLR|BRSET|BSR|BSCLR|BSSET|JMP|JCLR|JSET|JSR|JSCLR|JSSET|CLR|CMP|CMPM|CPMU|DEC|DIV|DMAC|INC|MAC|MACI|MACR|MACRI|MACSU|MACUU|MAX|MAXM|MPY|MPYI|MPYR|MPYRI|MPYSU|MPYUU|NEG|NORM|NORMF|RND|SBC|SUB|SUBL|SUBR|TFR|TST|AND|ANDI|CLB|EOR|EXTRACT|EXTRACTU|INSERT|LSL|LSR|MERGE|NOT|OR|ORI|ROL|ROR|BCHG|BCLR|BSET|BTST|DO|DOR|FOREVER|ENDDO|LEA|LUA|LRA|MOVE|MOVEC|MOVEM|MOVEP|NOP|PLOCK|PUNLOCK|PLOCKR|PULOCKR|PFREE|PFLUSH|PFLUSHUN|REP|RESET|RTI|RTS|STOP|WAIT)\b</string>
+			<string>(?&lt;![a-zA-Z])\$[0-9A-Fa-f]+\b</string>
 			<key>name</key>
-			<string>keyword.other.opcode.cpu.dsp56300</string>
+			<string>constant.numeric.hex.m68k</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;![a-zA-Z])@[0-7]+\b</string>
+			<key>name</key>
+			<string>constant.numeric.octal.m68k</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;![a-zA-Z])%[01]+\b</string>
+			<key>name</key>
+			<string>constant.numeric.binary.m68k</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;![a-zA-Z])[+-]?[0-9]+(\.[0-9]+)?\b</string>
+			<key>name</key>
+			<string>constant.numeric.decimal.m68k</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)\b(ABS|ADC|ADD|ADDL|ADDR|ASL|ASR|CLR|CMP|CMPM|CPMU|DEC|DIV|DMAC|INC|MAX|MAXM|NEG|NORM|NORMF|RND|SBC|SUB|SUBL|SUBR|TFR|TST|AND|ANDI|CLB|EOR|EXTRACT|EXTRACTU|INSERT|LSL|LSR|MERGE|NOT|OR|ORI|ROL|ROR|BCHG|BCLR|BSET|BTST|LEA|LUA|LRA|MOVE|MOVEC|MOVEM|MOVEP|NOP|PLOCK|PUNLOCK|PLOCKR|PULOCKR|PFREE|PFLUSH|PFLUSHUN|REP|RESET|RTI|RTS|STOP|WAIT)\b</string>
+			<key>name</key>
+			<string>keyword.operator.dsp56300</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)\b(MAC|MPY)(I|R|RI|SU|UU)?\b</string>
+			<key>name</key>
+			<string>keyword.operator.dsp56300</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)\b(DMAC(SS|SU|UU)?)\b</string>
+			<key>name</key>
+			<string>keyword.operator.dsp56300</string>
+		</dict>
+		<dict>
+			<key>match</key>
+			<string>(?i)\b(BRA|BSR|JMP|DO|DOR|FOREVER|ENDDO|BRCLR|BRSET|BSCLR|BSSET|JCLR|JSET|JSR|JSCLR|JSSET)\b</string>
+			<key>name</key>
+			<string>keyword.control.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i)\b(BRK(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\b</string>
 			<key>name</key>
-			<string>keyword.other.opcode.cpu.debugcc.dsp56300</string>
+			<string>keyword.control.debugcc.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i)\b(B(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\b</string>
 			<key>name</key>
-			<string>keyword.other.opcode.cpu.bcc.dsp56300</string>
+			<string>keyword.control.bcc.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i)\b(BS(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\b</string>
 			<key>name</key>
-			<string>keyword.other.opcode.cpu.bscc.dsp56300</string>
+			<string>keyword.control.bscc.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i)\b(DEBUG(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN)?)\b</string>
 			<key>name</key>
-			<string>keyword.other.opcode.cpu.debugcc.dsp56300</string>
+			<string>keyword.control.debugcc.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i)\b(J(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\b</string>
 			<key>name</key>
-			<string>keyword.other.opcode.cpu.jcc.dsp56300</string>
+			<string>keyword.control.jcc.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i)\b(JS(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\b</string>
 			<key>name</key>
-			<string>keyword.other.opcode.cpu.jscc.dsp56300</string>
+			<string>keyword.control.jscc.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
-			<string>(?i)\b(IF(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\b</string>
+			<string>(?i)\b(IF(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN)(\.U)?)\b</string>
 			<key>name</key>
-			<string>keyword.other.opcode.cpu.ifcc.dsp56300</string>
+			<string>keyword.control.ifcc.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i)\b(TRAP(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN)?)\b</string>
 			<key>name</key>
-			<string>keyword.other.opcode.cpu.trapcc.dsp56300</string>
+			<string>keyword.control.trapcc.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?i)\b(T(CC|HS|CS|LO|EC|EQ|ES|GE|GT|LC|LE|LS|LT|MI|NE|NR|PL|NN))\b</string>
 			<key>name</key>
-			<string>keyword.other.opcode.cpu.tcc.dsp56300</string>
+			<string>keyword.operator.tcc.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
@@ -106,7 +153,7 @@
 		</dict>
 	</array>
 	<key>scopeName</key>
-	<string>source.asm.dsp56300</string>
+	<string>source.dsp56300</string>
 	<key>uuid</key>
 	<string>ddad8bf1-2f0b-49f6-b69d-c43418626a89</string>
 </dict>
