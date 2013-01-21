@@ -47,25 +47,25 @@
 			<key>match</key>
 			<string>(?&lt;![a-zA-Z])\$[0-9A-Fa-f]+\b</string>
 			<key>name</key>
-			<string>constant.numeric.hex.m68k</string>
+			<string>constant.numeric.hex.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?&lt;![a-zA-Z])@[0-7]+\b</string>
 			<key>name</key>
-			<string>constant.numeric.octal.m68k</string>
+			<string>constant.numeric.octal.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?&lt;![a-zA-Z])%[01]+\b</string>
 			<key>name</key>
-			<string>constant.numeric.binary.m68k</string>
+			<string>constant.numeric.binary.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
 			<string>(?&lt;![a-zA-Z])[+-]?[0-9]+(\.[0-9]+)?\b</string>
 			<key>name</key>
-			<string>constant.numeric.decimal.m68k</string>
+			<string>constant.numeric.decimal.dsp56300</string>
 		</dict>
 		<dict>
 			<key>match</key>
